@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:100px;
+            height:100px;
+            backgroung-color:yellow;/*initial color*/
+            position:relative;
+            animation-name:colorchange;
+            animation-duration:4s;/*duration of the animation cycle*/
+            animation-iteration-count:infinite;/*repeat indefinitely*/
+            transition: background-color 0.5s,transform 0.5s;/*smooth transition on hover*/
+            animation-play-state:running;/*ensure animation is running by default*/
+
+        }
+        div:hover{
+            background-color:blue;/*color on hover*/
+            transform:translate(20px);/*move the box 20px to the right on hover*/
+            animation-play-state: paused;/*pause  the color change animation*/
+        }
+        @keyframes colorchange{
+            0%{
+                background-color: yellow;
+            
+            }
+            50%{
+                background-color: aqua;
+
+            }
+            100%{
+                background-color: yellow;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS Animation Example</h2>
+    <div></div>
+    <p><b>Note:</b>The box continuesly changes color from yellow to aqua and back to yellow.
+    when hvered ,it turns blue and shifts to the right.</p>
+    <h2>CSS Animation Example</h2>
+    <div></div>
+    <p><b>Note:</b>The box continuesly changes color from yellow to aqua and back to yellow.
+    when hvered ,it turns blue and shifts to the right.</p>
+    
+    
+</body>
+</html>
